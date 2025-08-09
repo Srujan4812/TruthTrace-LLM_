@@ -116,16 +116,17 @@ streamlit run app.py
 
 ## 📸 Screenshots
 
-| Claim Entry | Verdict with Multimedia |
-|-------------|------------------------|
-| ![Input](assets/sample_input.png) | ![Output](assets/sample_output.png) |
+| Claim Entry | Verdict Example 1 | Verdict Example 2 |
+|-------------|-------------------|-------------------|
+| ![Input](assets/screenshot_1.jpg) | ![Output1](assets/screenshot_2.jpg) | ![Output2](assets/screenshot_3.jpg) |
 
 ---
 
 ## 🎥 Demo Video
-🎬 **1-minute walkthrough** showing claim input, evidence collection, verdict generation, and multimedia enrichment.
 
-[Watch Demo Video](#) *(Add link to actual demo video)*
+🎬 **Watch the demo video here:**  
+[![Demo Video](assets/screenshot_1.jpg)](assets/demo.mp4.mp4)  
+*(Click the image to play the video)*
 
 ---
 
