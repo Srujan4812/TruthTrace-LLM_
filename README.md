@@ -1,59 +1,76 @@
-TruthTrace-LLM: End-to-End Automated Claim Verification & Evidence Retrieval
-TruthTrace-LLM is an integrated, AI-driven platform for rigorous, real-time claim verification and contextual evidence retrieval.
-It combines advanced information retrieval, knowledge bases, multimedia enrichment, and large language model reasoning to deliver structured, transparent verdicts for any natural language claim.
+# 🧠 TruthTrace-LLM: End-to-End Automated Claim Verification & Evidence Retrieval
 
-🚀 Live Demo
-🔗 Try it now: TruthTrace-LLM Web App
+**TruthTrace-LLM** is an integrated, AI-powered platform for rigorous, real-time claim verification and contextual evidence retrieval.  
+It combines intelligent information retrieval, structured knowledge bases, multimedia enrichment, and large language model reasoning to deliver structured, transparent verdicts for any natural language claim.
 
-🔹 Key Features
-Intelligent Claim Preprocessing
-Extracts the important keywords & context from user queries for targeted search.
+---
 
-Multi-Modal Evidence Acquisition
+## 🚀 Live Demo
 
-🌐 Web Search – Serper API for real-time, high-authority sources
+🔗 [**Try it now → TruthTrace-LLM Web App**](https://truthtrace-llm-aa8ehtudvwvspzlqbqx2kg.streamlit.app/)
 
-📚 Knowledge Base – Wikipedia API for factual data and images
+---
 
-🖼 Images – Pixabay API for relevant contextual images
+## 🔹 Key Features
 
-🎥 Videos – YouTube Data API for multimedia references
+### ✨ Intelligent Claim Preprocessing  
+Extracts important keywords and context from user queries for targeted search and analysis.
 
-Evidence Aggregation & Filtering
-Ensures diversity, authority, and relevance of retrieved sources.
+### 🌐 Multi-Modal Evidence Acquisition  
+- **Serper API** – Real-time, high-authority web search  
+- **Wikipedia API** – Structured factual data  
+- **Pixabay API** – Relevant contextual imagery  
+- **YouTube Data API** – Multimedia references (videos)
 
-Evidence-Constrained LLM Reasoning
-Uses Azure-hosted DeepSeek LLM to produce unbiased explanations with verdicts:
-REAL, FAKE, or MISLEADING.
+### 📦 Evidence Aggregation & Filtering  
+Ensures diversity, credibility, and contextual relevance of all retrieved sources.
 
-Contextual Multimedia Enrichment
-Augments verdicts with related images and videos for clarity.
+### 🤖 Evidence-Constrained LLM Reasoning  
+Uses **DeepSeek LLM** (via Azure) to evaluate and verify claims using only the retrieved evidence.
 
-Fully Autonomous Pipeline
-From claim input to verdict — fully automated, minimal manual intervention required.
+Verdicts include:
+- ✅ `REAL`
+- ❌ `FAKE`
+- ⚠️ `MISLEADING`
 
-🏗 System Architecture
-User Interface Layer – Streamlit web app for claim input and output display.
+### 🖼 Contextual Multimedia Enrichment  
+Adds images and videos to verdicts for improved clarity and transparency.
 
-Data Acquisition Layer – APIs for search, knowledge, and multimedia content.
+### 🔁 Fully Autonomous Pipeline  
+From claim input to final verdict — fully automated with minimal manual input.
 
-Processing & Reasoning Layer – LLM-powered reasoning based only on retrieved evidence.
+---
 
-Presentation Layer – Displays verdict, explanation, sources, images & videos.
+## 🏗️ System Architecture
 
-🛠 Tech Stack
-Frontend: Streamlit
+- **User Interface Layer** – Streamlit-based web app  
+- **Data Acquisition Layer** – Real-time APIs for search, knowledge, and multimedia  
+- **Processing Layer** – LLM-powered reasoning based on contextual evidence  
+- **Presentation Layer** – Verdicts, explanations, sources, images, and videos
 
-APIs: Serper · Wikipedia · Pixabay · YouTube Data API
+[User] → [Streamlit UI] → [Evidence Collection] → [LLM Analysis] → [Verdict + Media]
 
-LLM: DeepSeek via Azure
+yaml
+Copy
+Edit
 
-Environment Management: .env with python-dotenv
+---
 
-Language: Python 3.x
+## 🛠 Tech Stack
 
-📦 Installation
-bash
+| Component       | Technology                                 |
+|----------------|---------------------------------------------|
+| Frontend       | Streamlit                                   |
+| Language       | Python 3.x                                  |
+| APIs           | Serper · Wikipedia · Pixabay · YouTube Data API |
+| LLM            | DeepSeek (Azure-hosted)                     |
+| Env Management | python-dotenv + `.env`                      |
+
+---
+
+## 📦 Installation
+
+```bash
 # Clone the repository
 git clone https://github.com/Srujan4812/TruthTrace-LLM_.git
 cd TruthTrace-LLM_
@@ -61,67 +78,92 @@ cd TruthTrace-LLM_
 # Install dependencies
 pip install -r requirements.txt
 pip install python-dotenv
-Create a .env file and add:
+🔐 Setup .env File
+Create a .env file in the root directory and add your API keys:
 
-text
+env
+Copy
+Edit
 AZURE_ENDPOINT=...
 MODEL_NAME=...
 AZURE_API_KEY=...
 SERPER_API_KEY=...
 PIXABAY_API_KEY=...
 YOUTUBE_API_KEY=...
-▶ Usage (Local)
+⚠️ Important: Never commit .env or API keys to GitHub.
+
+▶️ Usage (Local)
 bash
+Copy
+Edit
 streamlit run app.py
-Open the Streamlit web interface in your browser.
+Open the Streamlit interface in your browser.
+Enter a claim → receive a verdict with explanation, source links, images, and videos.
 
-Enter a claim → receive verdict, explanation, related sources, images, and videos.
+🌍 Deployment
+✅ Live App: Streamlit Cloud
+Can also be deployed to:
 
-🌎 Deployment
-Live App: https://truthtrace-llm-aa8ehtudvwvspzlqbqx2kg.streamlit.app/ ✅
+Azure App Service
 
-Can also be deployed on Azure App Service, Heroku, or other cloud platforms.
+Heroku
 
-Use platform Secrets Management to keep API keys secure.
+Any modern cloud platform
 
-Never commit .env or API keys to GitHub.
+Use built-in Secrets Management to securely store API keys.
+
+📸 Screenshots
+🔍 Claim Entry Interface
+
+✅ Verdict with Explanation & Multimedia
+
+🎥 Demo Video
+Watch how TruthTrace-LLM works in action:
+👉 Click to Watch Demo Video
+
+🎬 A 1-minute walkthrough showing claim input, evidence collection, verdict generation, and multimedia enrichment.
 
 📊 Model Performance Metrics
-Metric	Value	Description
-Epochs Trained	3	Number of training epochs completed
-Training Loss		Model training loss per epoch
-– Epoch 1	0.0128	
-– Epoch 2	0.0024	
-– Epoch 3	0.0002	
-Validation Loss		Validation loss per epoch
-– Epoch 1	0.000476	
-– Epoch 2	0.000191	
-– Epoch 3	0.000128	
-Validation Accuracy	1.0000	Perfect accuracy on validation set
-Validation Precision	1.0000	Perfect precision on validation set
-Validation Recall	1.0000	Perfect recall on validation set
-Validation F1 Score	1.0000	Perfect F1 score on validation set
-Test Set Eval Loss	0.0123	Loss on unseen test data
-Test Set Accuracy	0.9983	Nearly perfect test accuracy
-Test Set Precision	1.0000	Perfect precision on test set
-Test Set Recall	0.9967	Very high recall on test set
-Test Set F1 Score	0.9983	Excellent balance of precision & recall
-Evaluation Runtime	2.0685 s	Time taken to evaluate test dataset
-Samples/Second	290.07	Processing speed for test samples
-Steps/Second	9.186	Steps per second during evaluation
-Summary: Achieved extremely high precision, recall, and accuracy, indicating outstanding reliability for real-time claim verification.
+✅ Training & Validation
+Metric	Epoch 1	Epoch 2	Epoch 3
+Training Loss	0.0128	0.0024	0.0002
+Validation Loss	0.000476	0.000191	0.000128
+Accuracy	1.0000	1.0000	1.0000
+Precision	1.0000	1.0000	1.0000
+Recall	1.0000	1.0000	1.0000
+F1 Score	1.0000	1.0000	1.0000
+
+🧪 Test Set Evaluation
+Metric	Value
+Test Set Loss	0.0123
+Test Set Accuracy	0.9983
+Test Set Precision	1.0000
+Test Set Recall	0.9967
+Test Set F1 Score	0.9983
+Eval Runtime	2.0685 s
+Samples/Second	290.07
+Steps/Second	9.186
+
+✅ Summary: Near-perfect performance on both validation and test sets.
+Ideal for real-time deployment in production environments.
 
 💼 Professional Use Cases
-📰 Media Verification – Speed up editorial fact-checking workflows.
+📰 Media Fact-Checking – Accelerate editorial verification workflows
 
-🎓 Academic Research – Provide evidence summaries for citations & claim validation.
+🎓 Academic Research – Back up claims and citations with evidence
 
-🏢 Enterprise Knowledge Validation – Automated evaluation for compliance, risk, and internal comms.
+🏢 Enterprise Validation – Automate compliance and internal knowledge validation
 
 📄 License
-MIT License
+Licensed under the MIT License.
 
-Disclaimer: This system provides evidence-supported verdicts for informational purposes. Not a substitute for full legal or regulatory verification.
+⚠️ Disclaimer
+This tool provides automated, evidence-supported verdicts to assist with decision-making.
+It is not a replacement for legal, journalistic, or regulatory investigations.
 
-Questions / Contributions:
-Open an issue or PR via GitHub Issues
+🤝 Questions & Contributions
+💬 Open an issue
+
+📬 Submit a pull request
+
+🛠 Help shape the future of AI-powered claim verification!
